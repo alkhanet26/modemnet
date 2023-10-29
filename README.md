@@ -12,7 +12,7 @@ opkg update && opkg install screen
 
 lalu jalankan perintah dibawah ini di terminal openwrt
 ```
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/get.sh" -O /tmp/get.sh && chmod +x /tmp/get.sh && sh /tmp/get.sh
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/geto.sh" -O /tmp/geto.sh && chmod +x /tmp/geto.sh && sh /tmp/geto.sh
 ```
 
 tunggu hingga proses download file selesai
