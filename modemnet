@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# GPIO Wrapper
+# Modify by ALK-NET
+
+function cek() {
+  ifc="${2}"
+  ipm=$(ip route | grep "${ifc}" | grep default | cut -d' ' -f3)
+
+  echo -e "Cek Modem : "${ipm}
+  logger "Cek Modem : "${ipm}	
+	pms=$(ping -c 5 ${ipm} | grep round-trip | cut -d/ -f4)
+	msa=$(ping -c 5 ${ipm} | grep round-trip | grep -o ms)
+
+  if [ $msa = "ms" ]; then	
+	echo -e "Terhubung : "${ipm}
+	logger "Terhubung : "${ipm}
+  else
+	echo -e "Disconnect : "${ipm}
+	logger -e "Disconnect : "${ipm}
+	ledon -usb reset > /dev/null 2>&1
+  fi
+  case "${2}" in
+    "*")
+        usage
+        ;;
+  esac
+}
+
+function r(){
+echo -e "Restarting Modem"
+ledon -usb reset > /dev/null 2>&1
+}
+
+function usage() {
+  cat <<EOF
+Usage:
+  -cek [interface: wwan0, usb0, eth1]
+  -r   [Restart Modem]
+EOF
+}
+
+case "${1}" in
+  -cek)
+    cek "${2}"
+    ;;
+  -r)
+    r
+    ;;
+  *)
+    usage
+    ;;
+esac
