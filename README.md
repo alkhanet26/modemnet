@@ -28,6 +28,9 @@ ketik perintah-perintah
 - ledon (dimasukan perintah di ``schedule task``) contoh untuk reboot modem setiap jam 00:00 => 0 0 * * * sh /sbin/ledon -usb reset
 - modemnet (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 3 menit => */3 * * * * sh /sbin/modemnet -cek
 
+# NOTE
+  ``DTB`` harus pas ya,,,, karena script ini auto baca model dari S905x (B860H V1/v2 dan HG680P)
+
 # Thanks TO
 - [Lutfa Ilham](https://github.com/lutfailham96)
 - [IndoWRT](https://www.facebook.com/groups/indowrt)
