@@ -23,6 +23,11 @@ ketik perintah-perintah
 - ledon = untuk reset USB (reboot modem), dan membuat led menyala (hijau, merah ataupun orange) sesuai kehendak kita
 - modemnet = auto ping ke ip modem sehingga ketika ip modem hilang, akan mereset usb (mereboot modem)
 
+# Penggunaan
+- lednet (dimasukan perintah di ``rc.local`` atau ``startup``) contoh sh /sbin/lednet -r
+- ledon (dimasukan perintah di ``schedule task``) contoh untuk reboot modem setiap jam 00:00 => 0 0 * * * sh /sbin/ledon -usb reset
+- modemnet (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 3 menit => */3 * * * * sh /sbin/modemnet -cek
+
 # Thanks TO
 - [Lutfa Ilham](https://github.com/lutfailham96)
 - [IndoWRT](https://www.facebook.com/groups/indowrt)
