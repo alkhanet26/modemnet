@@ -3,8 +3,8 @@
 
 
 {
-echo -e "Checking Supporting Packages"
 pkg=$(opkg list | grep -o screen)
+echo -e "Checking Supporting Packages
 
 if [ $pkg = "screen" ]; then
 	echo "Downloading Binaries"
