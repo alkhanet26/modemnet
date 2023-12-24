@@ -25,9 +25,24 @@ ketik perintah-perintah
 
 # Penggunaan
 - lednet (dimasukan perintah di ``rc.local`` atau ``startup``) contoh sh /sbin/lednet -r
-- ledon (dimasukan perintah di ``schedule task``) contoh untuk reboot modem setiap jam 00:00 => 0 0 * * * sh /sbin/ledon -usb reset
-- modemnet (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 3 menit => */3 * * * * sh /sbin/modemnet -cek
+- ledon (dimasukan perintah di ``schedule task``) contoh untuk reboot modem setiap jam 00:00 =>
+  ```
+  0 0 * * * sh /sbin/ledon -usb reset
+  ```
 
+# Untuk yang suka hilang IP modem
+- modemnet (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 3 menit
+  ```
+  */3 * * * * sh /sbin/modemnet -cek
+  ```
+
+# Untuk Cek Koneksi Internet
+- modemcek (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 1 menit
+  untuk domain bebas ya,, yang penting bisa di ping
+  ```
+  */1 * * * * sh /sbin/modemcek www.google.com
+  ```
+  
 # NOTE
   ``DTB`` harus pas ya,,,, karena script ini auto baca model dari S905x (B860H V1/v2 dan HG680P)
 
