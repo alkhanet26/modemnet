@@ -37,9 +37,9 @@ ketik perintah-perintah
   ```
 
 # Untuk Cek Koneksi Internet
-- modemcek (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 1 menit
+- modemcek (dimasukan perintah di ``schedule task``) contoh untuk pengecekan koneksi internet ke ``domain``
 
-  untuk domain bebas ya,, yang penting bisa di ping
+  tertentu setiap 1 menit dan untuk domain bebas ya,, yang penting bisa di ``ping``
   ```
   */1 * * * * sh /sbin/modemcek www.google.com
   ```
