@@ -38,6 +38,7 @@ ketik perintah-perintah
 
 # Untuk Cek Koneksi Internet
 - modemcek (dimasukan perintah di ``schedule task``) contoh untuk pengecekan ip modem setiap 1 menit
+
   untuk domain bebas ya,, yang penting bisa di ping
   ```
   */1 * * * * sh /sbin/modemcek www.google.com
