@@ -11,7 +11,8 @@ if [ $pkg = "screen" ]; then
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/lednet" -O /sbin/lednet && chmod +x /sbin/lednet
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/ledon" -O /sbin/ledon && chmod +x /sbin/ledon
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/modemnet" -O /sbin/modemnet && chmod +x /sbin/modemnet
-	sleep 2
+	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/modemcek" -O /sbin/modemcek && chmod +x /sbin/modemcek	
+ 	sleep 2
 	echo "Successfully Downloaded"
 	sleep 5
 	clear
@@ -24,6 +25,7 @@ else
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/lednet" -O /sbin/lednet && chmod +x /sbin/lednet
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/ledon" -O /sbin/ledon && chmod +x /sbin/ledon
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/modemnet" -O /sbin/modemnet && chmod +x /sbin/modemnet
+	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/modemcek" -O /sbin/modemcek && chmod +x /sbin/modemcek
 	sleep 2
 	echo "Successfully Downloaded"
 	sleep 5
