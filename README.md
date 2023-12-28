@@ -7,7 +7,7 @@ Script ini dapat menjadikan beberapa fitur di Hardware STB Openwrt (B860H dan HG
 
 Untuk dapat menggunakan script ini mohon install paket pendukung
 ```
-opkg update && opkg install screen
+opkg update && opkg install screen httping
 ```
 
 lalu jalankan perintah dibawah ini di terminal openwrt
