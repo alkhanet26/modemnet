@@ -19,7 +19,7 @@ if [ $pkg = "screen" ]; then
 	bash --login
 else
 	echo "Downloading Packages"
-	opkg update && opkg install screen
+	opkg update && opkg install screen httping
 	sleep 2
 	clear
 	wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/modemnet/main/lednet" -O /sbin/lednet && chmod +x /sbin/lednet
