@@ -1,24 +1,14 @@
 #!/bin/bash
 # ping by AlkhaNET
 
-bug="$1"
+bug=$1
+tgl=$(date)
+dc=$(httping -c 1 ${bug} | grep connected | cut -d= -f3 | grep -c ms)
 
-echo -e "Cek Koneksi Internet : "${bug}
-logger "Cek Koneksi Internet : "${bug}
-#	ping -c 5 ${bug} | grep round-trip > /tmp/cping
-	
-	pms=$(httping -c 5 ${bug} | grep round-trip | cut -d/ -f4)
-	msa=$(httping -c 5 ${bug} | grep round-trip | grep -o ms)
-	
-if [ $msa = "ms" ]; then	
-	echo -e "time = $pms $msa"
-	logger "time = $pms $msa"
+if [[ $dc = "1" ]]; then
+   echo -e "Connected"
 else
-	echo -e "Tidak ada Koneksi Internet"
-	echo -e "Restart Modem"
-	sleep 2
-	clear
-	/etc/init.d/network restart
-	AT^RESET | atinout -/dev/ttyUSB0 -
-	/sbin/modemnet -r
-fi	
+   echo -e "No Internet"
+   modemnet -r
+   echo -e "Reboot Modem : ${tgl}" >> /root/log.txt
+fi
