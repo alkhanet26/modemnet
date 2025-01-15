@@ -1,0 +1,308 @@
+#!/bin/bash
+clear 
+echo -e
+echo -e
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "  • ALK-NET •                 "
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " [\e[36m•1\e[0m] Lock Freq Otomatis 4G"
+echo -e " [\e[36m•2\e[0m] Lock Freq 900"
+echo -e " [\e[36m•3\e[0m] Lock Freq 1800"
+echo -e " [\e[36m•4\e[0m] Lock Freq 2100"
+echo -e " [\e[36m•5\e[0m] Lock Freq 2300"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+
+echo -e " [\e[36m•6\e[0m] Cek Frekuensi, RSRP dan RSRQ"
+echo -e " [\e[36m•7\e[0m] Cek SMS Terakhir"
+echo -e " [\e[36m•8\e[0m] Cek Kekuatan Sinyal"
+echo -e " [\e[36m•9\e[0m] Ubah IP Operator"
+echo -e " [\e[36m•10\e[0m] Cek IP Operator "
+
+echo -e   ""
+echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
+read -p " Select menu :  "  opt
+echo -e   ""
+case $opt in
+1) clear ; 
+echo -e mohon ditunggu proses lock auto freq 4g....
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://2263
+sleep 4
+
+adb shell input tap 121 188
+sleep 1
+adb shell input tap 102 354
+sleep 1
+adb shell input tap 100 186
+
+sleep 3
+adb shell screencap /sdcard/cek_frekuensi.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb shell input keyevent 26
+adb pull /sdcard/cek_frekuensi.png /root/.000j1ace
+sleep 2
+clear
+echo -e 
+echo -e Done................................
+echo -e
+echo -e Silahkan cek screenshot berhasil tidaknya lockband di folder /root/.000j1ace
+ ;;
+
+2) clear ; 
+echo -e mohon ditunggu proses lock freq 900....
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://2263
+sleep 4
+
+adb shell input tap 121 188
+sleep 1
+adb shell input tap 102 354
+sleep 1
+adb shell input tap 83 398
+
+sleep 3
+adb shell screencap /sdcard/cek_frekuensi.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb shell input keyevent 26
+adb pull /sdcard/cek_frekuensi.png /root/.000j1ace
+sleep 2
+clear
+echo -e 
+echo -e Done................................
+echo -e
+echo -e Silahkan cek screenshot berhasil tidaknya lockband di folder /root/.000j1ace
+ ;;
+
+3) clear ; 
+echo -e mohon ditunggu proses lock freq 1800....
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://2263
+sleep 4
+
+adb shell input tap 121 188
+sleep 1
+adb shell input tap 102 354
+sleep 1
+adb shell input tap 125 270
+
+sleep 3
+adb shell screencap /sdcard/cek_frekuensi.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb shell input keyevent 26
+adb pull /sdcard/cek_frekuensi.png /root/.000j1ace
+sleep 2
+clear
+echo -e 
+echo -e Done................................
+echo -e
+echo -e Silahkan cek screenshot berhasil tidaknya lockband di folder /root/.000j1ace
+ ;;
+
+4) clear ; 
+echo -e mohon ditunggu proses lock freq 2100....
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://2263
+sleep 4
+
+adb shell input tap 121 188
+sleep 1
+adb shell input tap 102 354
+sleep 1
+adb shell input tap 90 228
+
+sleep 3
+adb shell screencap /sdcard/cek_frekuensi.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb shell input keyevent 26
+adb pull /sdcard/cek_frekuensi.png /root/.000j1ace
+sleep 2
+clear
+echo -e 
+echo -e Done................................
+echo -e
+echo -e Silahkan cek screenshot berhasil tidaknya lockband di folder /root/.000j1ace
+ ;;
+
+5) clear ; 
+echo -e mohon ditunggu proses lock freq 2300....
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://2263
+sleep 4
+
+adb shell input tap 121 188
+sleep 1
+adb shell input tap 93 397
+sleep 1
+adb shell input tap 100 186
+
+sleep 3
+adb shell screencap /sdcard/cek_frekuensi.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb shell input keyevent 26
+adb pull /sdcard/cek_frekuensi.png /root/.000j1ace
+sleep 2
+clear
+echo -e 
+echo -e Done................................
+echo -e
+echo -e Silahkan cek screenshot berhasil tidaknya lockband di folder /root/.000j1ace
+ ;;
+
+6) clear ; 
+echo -e Proses cek Frek, RSRP, RSRQ, mohon ditunggu.......
+echo -e 
+sleep 5
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell su -c am broadcast -a android.provider.Telephony.SECRET_CODE -d android_secret_code://0011
+
+sleep 2
+adb shell screencap /sdcard/cek_FREK_RSRP_RSRQ_disini.png
+sleep 1
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb pull /sdcard/cek_FREK_RSRP_RSRQ_disini.png /root/.000j1ace
+sleep 1
+clear
+echo -e
+echo -e Done.....
+echo -e
+echo -e "\e[33mSILAHKAN CEK FREK, RSRP dan RSRQ DI FOLDER PALING LUAR FILE MANAGER,\033[0m" nama foldernya /root/.000j1ace
+ ;;
+
+7) clear ; 
+echo -e Proses cek SMS, mohon ditunggu......
+echo -e
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+
+adb shell input tap 299 741
+sleep 2
+adb shell input tap 249 185
+sleep 2
+adb shell screencap /sdcard/cek_sms_disini.png
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb pull /sdcard/cek_sms_disini.png /root/.000j1ace
+sleep 1
+clear
+echo -e
+echo -e Done.....
+echo -e
+echo -e "\e[33mSILAHKAN CEK SMS DI FOLDER PALING LUAR FILE MANAGER,\033[0m" nama foldernya /root/.000j1ace
+ ;;
+
+8) clear ; 
+echo -e Proses cek sinyal, mohon ditunggu......
+echo -e
+adb shell input keyevent 3
+adb shell input keyevent 187
+sleep 2
+adb shell input tap 234 764
+sleep 2
+adb shell input keyevent 3
+sleep 2
+adb shell am start -n com.android.settings/com.android.settings.deviceinfo.SimStatus
+
+sleep 2
+adb shell screencap /sdcard/cek_sinyal_disini.png
+sleep 1
+rm -r /root/.000j1ace
+sleep 2
+mkdir /root/.000j1ace
+adb pull /sdcard/cek_sinyal_disini.png /root/.000j1ace
+sleep 1
+clear
+echo -e
+echo -e Done.....
+echo -e
+echo -e "\e[33mSILAHKAN CEK SINYAL DI FOLDER PALING LUAR FILE MANAGER,\033[0m" nama foldernya /root/.000j1ace
+ ;;
+
+9) clear ; 
+echo -e Proses ubah ip, mohon ditunggu
+echo -e
+adb shell settings put global airplane_mode_on 1
+adb shell am broadcast -a android.intent.action.AIRPLANE_MODE
+sleep 4
+adb shell settings put global airplane_mode_on 0
+adb shell am broadcast -a android.intent.action.AIRPLANE_MODE
+clear
+sleep 1
+echo -e 
+echo -e "\e[33mIP SUDAH BERUBAH BOSKUH\033[0m", Silahkan Cek IP Barunya
+ ;;
+
+10) clear ; 
+echo -e
+adb shell netcfg
+echo -e
+echo -e "\e[33mCEK IP DIBARISAN rmnet0\033[0m"
+ ;;
+
+x) exit ;;
+*) echo "Anda salah tekan " ; sleep 1 ; sh /sbin/j1ace ;;
+esac
