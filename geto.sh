@@ -3,7 +3,7 @@
 
 
 {
-pkg=$(opkg list | grep -o screen)
+pkg=$(opkg list-installed | grep -o screen)
 echo -e "Checking Supporting Packages"
 
 if [ $pkg = "screen" ]; then
